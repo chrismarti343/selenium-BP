@@ -3,7 +3,6 @@ package test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,9 +13,7 @@ import org.testng.annotations.Test;
 import utils.ExtentFactory;
 import pages.*;
 
-import java.time.Duration;
-
-public class addtwoproducts {
+public class Addtwoproducts {
 
     WebDriver dv;
     ExtentReports report;
@@ -40,7 +37,7 @@ public class addtwoproducts {
     public void beforeMethod() throws InterruptedException {
 
         report = ExtentFactory.getInstance();
-        nameTest = "Reto practico Banco de Pinchincha";
+        nameTest = "Reto practico Banco de Pinchincha 1";
         test = report.startTest(nameTest,"Descripcion: 1. Agregar dos productos al carrito 2. Visualizar el carrito 3. Completar el “Checkout” como invitado: “Guest Checkout” 4. Finalizar la compra hasta la confirmación: “Your order has been placed!” ");
         ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--headless=new");
