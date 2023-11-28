@@ -34,10 +34,10 @@ public class Addtwoproducts {
 
 
     @BeforeMethod
-    public void beforeMethod() throws InterruptedException {
+    public void beforeMethod() {
 
         report = ExtentFactory.getInstance();
-        nameTest = "Reto practico Banco de Pinchincha 1";
+        nameTest = "Reto practico Banco de Pinchincha";
         test = report.startTest(nameTest,"Descripcion: 1. Agregar dos productos al carrito 2. Visualizar el carrito 3. Completar el “Checkout” como invitado: “Guest Checkout” 4. Finalizar la compra hasta la confirmación: “Your order has been placed!” ");
         ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--headless=new");
@@ -51,7 +51,7 @@ public class Addtwoproducts {
     }
 
     @Test
-    public void testCreatePerfil() throws Exception {
+    public void testAddTwoProducts() throws Exception {
         homepage.gotoHome();
         homepage.clickFirstProduct();
         homepage.clickSecondProduct();
@@ -81,7 +81,7 @@ public class Addtwoproducts {
     }
 
     @AfterMethod
-    public void tearDown(ITestResult result) throws Exception {
+    public void tearDown(ITestResult result)  {
 
         if(ITestResult.FAILURE==result.getStatus())
         {
